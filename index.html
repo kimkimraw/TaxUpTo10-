@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="kimkim">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<main>
+		<h3>税の計算をしよう！</h3>
+		<br><br>
+		
+		<p>金額</p>
+		<input type="text" placeholder="金額を入力(半角数字のみ)" id="value"  autofocus="">
+
+		<form name="item_form">	
+			<p>購入品</p>
+			<select id="item" name="item_select">
+				<option value="empty"></option>
+				<option value="food">食品</option>
+				<option value="other">それ以外</option>
+			</select>
+		</form>
+
+		<form name="payment_form">	
+			<p>支払い方法</p>
+			<select id="payment" name="payment_select">
+				<option value="empty"></option>
+				<option value="cash">現金</option>
+				<option value="credit">クレジットカード</option>
+			</select>
+		</form>
+
+		<br><br>
+		<p id=errorText class="errorText"></p>
+		<br>
+		<button  type="button" id="btn" class="btn">決定</button>
+
+		<br><br><br>
+		<h2>計算結果...</h2>
+		<div class="result_form" id="result_form">
+			<p>金額：<span id="noCalc"></span></p>
+			<p>税込価格：<span id="calcResult"></span></p>
+			<p>消費税：<span id="tax"></span></p>
+			<p>キャッシュバック：<span id="cashback"></span></p>
+		<div>
+	</main>
+
+<script type="text/javascript" src="taxCalc.js"></script>
+</body>
+</html> 
